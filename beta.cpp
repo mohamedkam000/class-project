@@ -205,12 +205,12 @@ void contactsList::showContacts(){
 		cout << "-------------------------------------------\n\n" << endl;
 	}
 };
+contact* f;
 bool menu();
 int main(){
 	int n;
 	string name, givenname, additionalname, yominame, givennameyomi, additionalnameyomi, familynameyomi, shortname, nickname, namesuffix, nameprefix, maidenname, birthday, initials, sensitivity, priority, mileage, dirserver, occup, hobby, subject, notes, language, billing, family, phone, gender, email, address, website, search;
 	contactsList a;
-	contact* f;
 	while(menu()){
 		cout << "\nYor choice: ";
 		cin >> n;
