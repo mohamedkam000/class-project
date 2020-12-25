@@ -132,12 +132,12 @@ void contactsList::showContacts(){
 		cout << "-------------------------------------------\n\n" << endl;
 	}
 };
+contact* f;
 bool menu();
 int main(){
 	int n;
 	string name, family, phone, address, email, gender, search;
 	contactsList a;
-	contact* f;
 	while(menu()){
 		cout << "\nYor choice: ";
 		cin >> n;
