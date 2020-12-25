@@ -567,7 +567,7 @@ int main(){
 				else if (de == 2) {
 					cout << "\nSearch a Contact Using any Term: ";
 					cin >> search;
-					f = a.findContact(search);
+					a.findContact(search);
 				}
 				else {
 					cout << "\nWrong Entry!" << endl;
