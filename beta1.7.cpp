@@ -321,14 +321,14 @@ void contactsList::showContacts(){
 		cout << "-------------------------------------------\n\n" << endl;
 	}
 };
+conan* z;
+contact* f;
 bool menu();
 int main(){
 	int n, con, sery, sho, de;
 	string name1, family1, phone1, name, givenname, additionalname, yominame, givennameyomi, additionalnameyomi, familynameyomi, shortname, nickname, namesuffix, nameprefix, maidenname, birthday, initials, sensitivity, priority, mileage, dirserver, occup, hobby, subject, notes, language, billing, family, phone, gender, email, address, website, search, search1;
 	contactsList a;
 	conly b;
-	conan* z;
-	contact* f;
 	while(menu()){
 		cout << "\nYor choice: ";
 		cin >> n;
