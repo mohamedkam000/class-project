@@ -1,36 +1,36 @@
 /*
- * Name:		Mohammed Kamal-Aldeen Othman
- * Class:		2nd Class
+ * Name:	Mohammed Kamal-Aldeen Othman
+ * Class:	2nd Class
  * Department:	Computer Engineering
 */
 
 #include <iostream>
 #include <string>
 using namespace std;
-class contact{
+class contact {
 	private:
 		string name, phone;
 	public:
 		contact *next;
-		contact(){
+		contact() {
 		};
-		contact(string name, string phone){
+		contact(string name, string phone) {
 			this -> name = name ; this -> phone = phone; next = NULL;
 		}
-		string getName(){
+		string getName() {
 			return name;
 		}
-		string getPhone(){
+		string getPhone() {
 			return phone;
 		}
-		void setContact(string name, string phone){
+		void setContact(string name, string phone) {
 			this -> name = name; this -> phone = phone ;
 		}
-		void getContact(){
+		void getContact() {
 			cout << name << "   " << phone << endl;
 		}
 };
-class contactsList{
+class contactsList {
 	private:
 		contact *head;
 		contact *last;
@@ -40,12 +40,12 @@ class contactsList{
 		void addBegin(string, string);
 		void showContacts();
 	};
-contactsList::contactsList(){
+contactsList::contactsList() {
 	head = NULL ; last = NULL; size = 0;
 }
-void contactsList::addBegin(string name, string phone){
+void contactsList::addBegin(string name, string phone) {
 	contact* new_contact = new contact(name , phone);
-	if (last == NULL || head == NULL){
+	if (last == NULL || head == NULL) {
 		head = new_contact;
 		last = new_contact;
 	}
@@ -55,9 +55,9 @@ void contactsList::addBegin(string name, string phone){
 	}
 	size++;
 }
-void contactsList::showContacts(){
+void contactsList::showContacts() {
 	cout << "\n\n" << endl;
-	if (last == NULL || head == NULL){
+	if (last == NULL || head == NULL) {
 		throw "No contacts!";
 	}
 	int l = 1;
@@ -68,14 +68,14 @@ void contactsList::showContacts(){
 	}
 };
 bool menu();
-int main(){
+int main() {
 	int n;
 	string name, phone;
 	contactsList a;
-	while(menu()){
+	while(menu()) {
 		cout << "Yor choice: ";
 		cin >> n;
-		switch(n){
+		switch(n) {
 			case 1:
 				cout << "\nName: ";
 				cin >> name;
@@ -92,7 +92,7 @@ int main(){
 	}
 	return 0;
 }
-bool menu(){
+bool menu() {
 	cout << "\n\nMain Menu:" << endl;
 	cout << "=========" << endl;
 	cout << "\n\n1- Add" << endl;
