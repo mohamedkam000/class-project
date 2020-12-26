@@ -104,13 +104,13 @@ void conly::dCon(string ser){
 	}
 	conan* temp1 = head1;
 	if (temp1 -> next1 == NULL) {
-		 cout << "\n\nNot found!" << endl;
+		 cout << "\nNot found!" << endl;
 		 return;
 	}
 	while(temp1 -> next1 -> gn() != ser && temp1 -> next1 -> gf() != ser && (head1 -> gf() + " " + head1 -> gf()) != ser && temp1 != NULL){ 
 		temp1 = temp1 -> next1;
 		if ( temp1 -> next1 == NULL ) {
-			 cout << "\n\nNot found!" << endl;
+			 cout << "\nNot found!" << endl;
 			 return;
 		};
 	}
@@ -118,7 +118,7 @@ void conly::dCon(string ser){
 	conan* temp3 = temp1 -> next1;
 	temp1 -> next1 = temp3 -> next1;
 	delete temp3;
-	if( last1 -> gn() == ser || last1 -> gf() == ser || ( last1->gn() + " " + last1->gf() ) == ser ) {
+	if( last1 -> gn() == ser || last1 -> gf() == ser || ( last1 -> gn() + " " + last1 -> gf() ) == ser ) {
 		last1 = temp1;
 	}
 	size1--;
@@ -332,7 +332,7 @@ void contactsList::add(string name, string family, string phone, string orgn, st
 }
 contact* contactsList::find(string serachQuery ){
 	contact* n = NULL;
-	for( n = head ; n != NULL ; n = n->next)
+	for( n = head ; n != NULL ; n = n -> next)
 		if (n -> getOrgs() == serachQuery || n -> getOrgyn() == serachQuery || n -> getOrgt() == serachQuery || n -> getOrgn() == serachQuery || n -> getOrgl() == serachQuery || n -> getOrgj() == serachQuery || n -> getOrgd() == serachQuery || n -> getOrg() == serachQuery || n -> getName() == serachQuery || n -> getWebtype() == serachQuery || n -> getPtype3() == serachQuery || n -> getPtype2() == serachQuery || n -> getPtype1() == serachQuery || n -> getPtype() == serachQuery || n -> getPhone4() == serachQuery || n -> getPhone3() == serachQuery || n -> getPhone2() == serachQuery || n -> getEmail1() == serachQuery || n -> getEmType1() == serachQuery || n -> getEmType() == serachQuery || n -> getAdditionalName() == serachQuery || n -> getMaidenName() == serachQuery || n -> getShortName() == serachQuery || n -> getNickName() == serachQuery || n -> getYomiName() == serachQuery || n -> getFamilyNameYomi() == serachQuery || n -> getAdditionalNameYomi() == serachQuery || n -> getGivenName() == serachQuery || n -> getGivenNameYomi() == serachQuery || n -> getInitials() == serachQuery || n -> getBirthday() == serachQuery || n -> getOccupation() == serachQuery || n -> getNameSuffix() == serachQuery || n -> getNamePrefix() == serachQuery || n -> getDirServer() == serachQuery || n -> getMileage() == serachQuery || n -> getHobby() == serachQuery || n -> getLanguage() == serachQuery || n -> getNotes() == serachQuery || n -> getSubject() == serachQuery || n -> getPriority() == serachQuery || n -> getSensitivity() == serachQuery || n -> getFamily() == serachQuery || ( n -> getName() + " " + n -> getFamily() ) == serachQuery || n -> getEmail() == serachQuery || n -> getAddress() == serachQuery || n -> getGender() == serachQuery) {
 			return n;
 		}
@@ -352,7 +352,7 @@ void contactsList::insertAfter(contact* n_contact, string name, string family, s
 contact* contactsList::findContact(string serachQuery){
 	contact* f = find(serachQuery);
 	if (f == NULL){
-		cout << "\n\nNot found!" << endl;
+		cout << "\nNot found!" << endl;
 	}
 	else {
 		cout << "\n\n------------------------------------" << endl;
@@ -362,8 +362,8 @@ contact* contactsList::findContact(string serachQuery){
 	return f;
 }
 void contactsList::deleteContact(string serachQuery){
-	if (head->getOrgs() == serachQuery || head->getOrgyn() == serachQuery || head->getOrgt() == serachQuery || head->getOrgn() == serachQuery || head->getOrgl() == serachQuery || head->getOrgj() == serachQuery || head->getOrgd() == serachQuery || head->getOrg() == serachQuery || head->getName() == serachQuery || head->getPtype3() == serachQuery || head->getPtype2() == serachQuery || head->getPtype1() == serachQuery || head->getPtype() == serachQuery || head->getPhone4() == serachQuery || head->getPhone3() == serachQuery || head->getPhone2() == serachQuery || head->getWebtype() == serachQuery || head->getEmail1() == serachQuery || head->getEmType1() == serachQuery || head->getEmType() == serachQuery || head -> getAdditionalName() == serachQuery || head -> getMaidenName() == serachQuery || head -> getShortName() == serachQuery || head -> getNickName() == serachQuery || head -> getYomiName() == serachQuery || head -> getFamilyNameYomi() == serachQuery || head -> getAdditionalNameYomi() == serachQuery || head -> getGivenName() == serachQuery || head -> getGivenNameYomi() == serachQuery || head -> getInitials() == serachQuery || head -> getBirthday() == serachQuery || head -> getOccupation() == serachQuery || head -> getNameSuffix() == serachQuery || head -> getNamePrefix() == serachQuery || head -> getDirServer() == serachQuery || head -> getMileage() == serachQuery || head -> getHobby() == serachQuery || head -> getLanguage() == serachQuery || head -> getNotes() == serachQuery || head -> getSubject() == serachQuery || head -> getPriority() == serachQuery || head -> getSensitivity() == serachQuery || head -> getEmail() == serachQuery || head -> getAddress() == serachQuery || head -> getGender() == serachQuery || head->getFamily() == serachQuery || (head->getName() + " " + head->getFamily()) == serachQuery) {
-		contact* temp = head->next;
+	if (head -> getOrgs() == serachQuery || head -> getOrgyn() == serachQuery || head -> getOrgt() == serachQuery || head->getOrgn() == serachQuery || head->getOrgl() == serachQuery || head->getOrgj() == serachQuery || head->getOrgd() == serachQuery || head->getOrg() == serachQuery || head->getName() == serachQuery || head->getPtype3() == serachQuery || head->getPtype2() == serachQuery || head->getPtype1() == serachQuery || head->getPtype() == serachQuery || head->getPhone4() == serachQuery || head->getPhone3() == serachQuery || head->getPhone2() == serachQuery || head->getWebtype() == serachQuery || head->getEmail1() == serachQuery || head->getEmType1() == serachQuery || head->getEmType() == serachQuery || head -> getAdditionalName() == serachQuery || head -> getMaidenName() == serachQuery || head -> getShortName() == serachQuery || head -> getNickName() == serachQuery || head -> getYomiName() == serachQuery || head -> getFamilyNameYomi() == serachQuery || head -> getAdditionalNameYomi() == serachQuery || head -> getGivenName() == serachQuery || head -> getGivenNameYomi() == serachQuery || head -> getInitials() == serachQuery || head -> getBirthday() == serachQuery || head -> getOccupation() == serachQuery || head -> getNameSuffix() == serachQuery || head -> getNamePrefix() == serachQuery || head -> getDirServer() == serachQuery || head -> getMileage() == serachQuery || head -> getHobby() == serachQuery || head -> getLanguage() == serachQuery || head -> getNotes() == serachQuery || head -> getSubject() == serachQuery || head -> getPriority() == serachQuery || head -> getSensitivity() == serachQuery || head -> getEmail() == serachQuery || head -> getAddress() == serachQuery || head -> getGender() == serachQuery || head->getFamily() == serachQuery || (head->getName() + " " + head->getFamily()) == serachQuery) {
+		contact* temp = head -> next;
 		delete head;
 		head = temp;
 		size--;
