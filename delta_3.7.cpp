@@ -582,7 +582,10 @@ int main(){
 // mainstream one
 				if (con == 1) {
 					cout << "\nName: ";
+// trying to allow space insert, seems working just fine
 					cin >> name1;
+// I honestly don't understand exactly why the functions does jump to
+// the next input, but doubling it seems to fix it
 					cout << "Family: ";
 					cin >> family1;
 					cout << "Phone: ";
@@ -608,13 +611,22 @@ int main(){
 					cout << "Additional Name: ";
 					cin >> additionalname;
 					cout << "Yomi Name: ";
-					cin >> yominame;
+// yomi name does get a special treatment as it is a combined name, of
+// which it requires a space as a seperator, here comes the "getline"
+// built-in code of which resolves this mandatory issue
+					getline(cin,yominame);
+					getline(cin,yominame);
 					cout << "Given Name Yomi: ";
-					cin >> givennameyomi;
+					getline(cin,givennameyomi);
+					getline(cin,givennameyomi);
+// for I don't know exactly why repeating the code makes it run fine,
+// I may dig for it later
 					cout << "Family Name Yomi: ";
-					cin >> familynameyomi;
+					getline(cin,familynameyomi);
+					getline(cin,familynameyomi);
 					cout << "Additional Name Yomi: ";
-					cin >> additionalnameyomi;
+					getline(cin,additionalnameyomi);
+					getline(cin,additionalnameyomi);
 					cout << "Short Name: ";
 					cin >> shortname;
 					cout << "Nick Name: ";
@@ -684,7 +696,8 @@ int main(){
 					cout << "Organization Name: ";
 					cin >> orgn;
 					cout << "Organization Yomi Name: ";
-					cin >> orgyn;
+					getline(cin,orgyn);
+					getline(cin,orgyn);
 					cout << "Organization Title: ";
 					cin >> orgt;
 					cout << "Organization Department: ";
@@ -816,13 +829,18 @@ int main(){
 					cout << "Additional Name: ";
 					cin >> additionalname;
 					cout << "Yomi Name: ";
-					cin >> yominame;
+					getline(cin,yominame);
+					getline(cin,yominame);
 					cout << "Given Name Yomi: ";
-					cin >> givennameyomi;
+					getline(cin,givennameyomi);
+					getline(cin,givennameyomi);
+// code is just like its predecessor
 					cout << "Family Name Yomi: ";
-					cin >> familynameyomi;
+					getline(cin,familynameyomi);
+					getline(cin,familynameyomi);
 					cout << "Additional Name Yomi: ";
-					cin >> additionalnameyomi;
+					getline(cin,additionalnameyomi);
+					getline(cin,additionalnameyomi);
 					cout << "Short Name: ";
 					cin >> shortname;
 					cout << "Nick Name: ";
@@ -892,7 +910,8 @@ int main(){
 					cout << "Organization Name: ";
 					cin >> orgn;
 					cout << "Organization Yomi Name: ";
-					cin >> orgyn;
+					getline(cin,orgyn);
+					getline(cin,orgyn);
 					cout << "Organization Title: ";
 					cin >> orgt;
 					cout << "Organization Department: ";
