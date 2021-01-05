@@ -92,9 +92,11 @@ class conly{
 // are just .. functions, it'll be clearer as you go along the lines
 		conly();
 		conan* fo(string);
+		conan* foa(string);
 		void add1(string,string,string);
 		void dCon(string);
 		conan* fCon(string);
+		conan* faCon(string);
 		void ia(conan*,string,string,string);
 		void sCon();
 };
@@ -554,7 +556,7 @@ bool menu();
 int main(){
 // variables defined in their most suitable way, holding either 
 	int n, ed, con, sery, sho, de;
-	string org, orgs, orgl, orgj, orgn, orgyn, orgd, orgt, name1, emtype, family1, phone1, phone4, phone2, phone3, webtype, email1, emtype1, emtype2, email2, ptype, ptype1, ptype2, ptype3, name, givenname, additionalname, yominame, givennameyomi, additionalnameyomi, familynameyomi, shortname, nickname, namesuffix, nameprefix, maidenname, birthday, initials, sensitivity, priority, mileage, dirserver, occup, hobby, subject, notes, language, billing, family, phone, gender, email, address, website, search, search1;
+	string k, sera, org, orgs, orgl, orgj, orgn, orgyn, orgd, orgt, name1, emtype, family1, phone1, phone4, phone2, phone3, webtype, email1, emtype1, emtype2, email2, ptype, ptype1, ptype2, ptype3, name, givenname, additionalname, yominame, givennameyomi, additionalnameyomi, familynameyomi, shortname, nickname, namesuffix, nameprefix, maidenname, birthday, initials, sensitivity, priority, mileage, dirserver, occup, hobby, subject, notes, language, billing, family, phone, gender, email, address, website, search, search1;
 	contactsList a;
 // hold the class in a variable, and other words in paper you should not
 // care about, what we'll do with these strings is that, we gonna stick
@@ -564,7 +566,7 @@ int main(){
 	conly b;
 // loop through the given block as long as the given condition is true
 	while(menu()){
-		cout << "\nYor choice: ";
+		cout << "\nYour choice: ";
 		cin >> n;
 // using the switch statement to select one of many code blocks to be
 // executed, you'll choose using solid numbers
@@ -931,10 +933,31 @@ int main(){
 					cout << "Wront entry!" << endl;
 				}
 				break;
-//			case 6:
-//				
-//				break;
-			case 7:
+			//case 6:
+				//cout << "\n1- Simple" << endl;
+				//cout << "2- Advanced" << endl;
+				//cout << "============\n" << endl;
+				//cout << "Your choice: ";
+				//cin >> mer;
+				//if (mer == 1) {
+				//	cout << "Contact to Merge: ";
+				//	cin >> sera;
+					//z = b.fCon(sera);
+					//cout << "Contact to Merge With: ";
+					//cin >> search1;
+					//z = b.fCon(sera);
+					//b.add1();
+					//k = sera + sera;
+					//cout << k;
+				//}
+				//else if (mer == 2) {
+					
+				//}
+				//else {
+				//	cout << "Wront entry!" << endl;
+				//}
+				//break;
+			case 6:
 				exit(1);
 			default:
 // default error message too, haha
@@ -959,8 +982,8 @@ bool menu(){
 	cout << "3- Search a Contact" << endl;
 	cout << "4- Delete a Contact" << endl;
 	cout << "5- Edit a Contact" << endl;
-	cout << "{coming soon ...} 6- Merge Two Contacts" << endl;
-	cout << "7- Exit" << endl;
+//	cout << "{Postponed} 6- Merge Two Contacts" << endl;
+	cout << "6- Exit" << endl;
 	cout << "==============================\n" << endl;
 // wouldn't have written these lines to return something other than true
 	return true;
